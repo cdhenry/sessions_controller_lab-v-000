@@ -3,7 +3,9 @@ class SessionsController < ApplicationController
   end
 
   def create
-    session[:username] = params[:username]
+    if params[:name].empty?
+    elsif params[:name].empty?
+    session[:name] = params[:name]
     redirect_to '/'
   end
 
