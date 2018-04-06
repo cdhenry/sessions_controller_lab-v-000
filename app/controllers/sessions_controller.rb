@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    binding.pry
+    raise params.inspect
     session.delete :name
   end
 end
