@@ -12,7 +12,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    raise params.inspect
     session.delete :name
   end
 end
