@@ -3,10 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if params[:name].empty?
-      render :new
-    elsif params[:name].empty?
-      render :new
+    if params[:name].empty? || params[:name].nil?
+      redirect_to '/new'
     else
       session[:name] = params[:name]
       redirect_to '/'
